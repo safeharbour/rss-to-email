@@ -29,7 +29,7 @@ describe('Email', () => {
     entryDivider.mockClear();
     outro.mockClear();
     foot.mockClear();
-    mjmlLib.mockClear();
+    mjmlLib.mjml2html.mockClear();
 
     config = {};
     feeds = [{items: [{title: 'test title'}]}];
@@ -75,11 +75,11 @@ describe('Email', () => {
     const html = '<!doctype html>';
     const mjmlContent = '<mjml></mjml>';
     email.mjmlContent = mjmlContent;
-    mjmlLib.mockImplementation(() => ({html}));
+    mjmlLib.mjml2html.mockImplementation(() => ({html}));
 
     const result = email.getHtml();
 
     expect(result).toEqual(html);
-    expect(mjmlLib).toHaveBeenCalledWith(mjmlContent);
+    expect(mjmlLib.mjml2html).toHaveBeenCalledWith(mjmlContent);
   });
 });

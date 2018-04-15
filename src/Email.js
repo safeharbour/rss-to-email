@@ -72,7 +72,7 @@ const Email = stampit({
      * @return {string}
      */
     getHtml() {
-      return mjmlLib(this.getMjml()).html;
+      return mjmlLib.mjml2html(this.getMjml()).html;
     },
   },
 });
