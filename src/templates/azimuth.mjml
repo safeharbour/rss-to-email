@@ -24,12 +24,6 @@
         <mj-text color="{{accentColor}}" padding="30px 0 40px" align="center" font-size="24px">
           <a href="{{header.link}}">{{header.title}}</a>
         </mj-text>
-        <mj-column width="45%">
-        <mj-text align="center" font-weight="500" padding="0px" font-size="18px">ISSUE #1 - MARCH 2021</mj-text>
-        <mj-divider border-width="2px" border-color="#616161"></mj-divider>
-        <mj-divider border-width="2px" border-color="#616161" width="45%">
-        </mj-divider>
-        </mj-column>
         {{/if}}
       </mj-column>
     </mj-section>
@@ -45,7 +39,7 @@
       <!-- Feed Divider -->
       <mj-section>
         <mj-column>
-          <mj-text font-size="24px" padding-top="20px" font-weight="bold">{{this.title}}</mj-text>
+          <mj-text font-size="28px" padding-top="20px" font-weight="bold">{{this.title}}</mj-text>
           <mj-text padding-bottom="20px">{{this.description}}</mj-text>
         </mj-column>
       </mj-section>
